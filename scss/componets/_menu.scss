@@ -1,0 +1,143 @@
+.menu {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu .link {
+  padding: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu .link:hover,
+.menu .link:focus {
+  text-decoration: underline;
+}
+
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: $white-color;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: $dark-color;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: auto;
+}
+
+.mobile-menu__link {
+  display: block;
+  padding: 10px;
+  color: $dark-color;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+
+  &--current {
+    color: $brand-color;
+  }
+}
+
+.mobile-contacts {
+  @extend %list;
+  margin-bottom: 64px;
+}
+
+.mobile-contacts__link {
+  @extend %link;
+  display: block;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
+  color: $main-color;
+}
+
+.mobile-contacts__phone {
+  margin-bottom: 32px;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  color: #2196f3;
+}
+
+.mobile-social {
+  @extend %list;
+  display: flex;
+  justify-content: start;
+}
+
+.mobile-social__link {
+  padding: 0 10px;
+  color: $brand-color;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+
+  letter-spacing: 0.02em;
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+}

@@ -1,0 +1,42 @@
+%section {
+  padding: 94px 0;
+}
+
+%list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+%link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+%visibility-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+%mainBtn {
+  color: $white-color;
+  background-color: $brand-color;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
